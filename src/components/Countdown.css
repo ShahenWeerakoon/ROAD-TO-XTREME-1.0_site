@@ -1,85 +1,41 @@
+.countdown-section{
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
 .countdown {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 15px 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  margin: 15px 0 15px 15px;
-  text-align: center;
-  max-width: 400px;
-  align-self: flex-start;
-}
-
-.countdown-container {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
   flex-wrap: wrap;
-}
+  align-items: center;
+  gap: 6px;
+  background: rgba(84, 115, 106, 0.2);
+  border-radius: 12px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  width: 42rem;
 
-.countdown-box {
-  background: rgba(0, 30, 60, 0.7);
-  border-radius: 8px;
-  padding: 12px 8px;
-  min-width: 65px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
-
-.countdown-value {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #03dac6;
-  margin-bottom: 4px;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
 }
 
 .countdown-label {
-  font-size: 0.75rem;
-  color: #e0e0e0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-align: center;
+  font-weight: 500;
+  margin-right: 4px;
+  color: #fff;
 }
+
 
 @media (max-width: 768px) {
   .countdown {
-    padding: 12px;
-    margin: 12px 0 12px 12px;
-    border-radius: 10px;
-  }
-  
-  .countdown-box {
-    min-width: 55px;
-    padding: 10px 6px;
-    border-radius: 6px;
-  }
-  
-  .countdown-value {
-    font-size: 1.5rem;
-  }
-  
-  .countdown-label {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    padding: 10px 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .countdown-container {
-    gap: 8px;
-  }
-  
-  .countdown-box {
-    min-width: 50px;
-    padding: 8px 5px;
-  }
-  
-  .countdown-value {
-    font-size: 1.3rem;
-  }
-  
-  .countdown-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.3px;
+  .countdown {
+    font-size: 0.8rem;
+    padding: 8px 10px;
   }
 }
