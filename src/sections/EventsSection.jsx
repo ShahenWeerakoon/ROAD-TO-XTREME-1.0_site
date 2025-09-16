@@ -14,22 +14,17 @@ const timelineEvents = [
       "A dedicated session to guide participants through the hackathon process, rules, and expectations—ensuring everyone is prepared and inspired.",
   },
   {
-    main: 'Workshop 1',
-    date: 'September 03 - 6.00 PM',
-    description:
-      'Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey.',
+    title: "Workshop 01: Algorithms & Strategy Bootcamp",
+    mode: "Physically",
+    date: "22nd September 2025",
+    details: "",
   },
   {
-    main: 'Awareness Session',
-    date: 'The September 03 - 6.00 PM',
-    description:
-      'A dedicated session to guide participants through the hackathon process, rules, and expectations—ensuring everyone is prepared and inspired.',
-  },
-  {
-    main: 'Workshop 1',
-    date: 'September 03 - 6.00 PM',
-    description:
-      'Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey.',
+    title: "Workshop 02: Submission of an AI Task with a Well-Prepared Prompt",
+    mode: "Virtually",
+    date: "6th October 2025",
+    details:
+      "Resource Person: Vidura Bandara Wijekoon – Senior Software Engineer – AI/ML at Virtusa",
   },
 ]
 
