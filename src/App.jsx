@@ -2,6 +2,8 @@ import "./App.css";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import EventsSection from "./sections/EventsSection";
+import GuidelineSection from "./components/Guidelines/Guidelines";
+import FooterSection from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <HeroSection />
         <AboutSection />
         <EventsSection />
+        <GuidelineSection/>
+        <FooterSection />
       </main>
     </div>
   );

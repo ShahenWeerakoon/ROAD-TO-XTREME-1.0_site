@@ -1,0 +1,27 @@
+.guidelines {
+  background: #0d0d0d;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.guidelines-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #64f4ac, #3da2ff);
+  background-clip: text;          
+  -webkit-background-clip: text;   
+  -webkit-text-fill-color: transparent;
+}
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.guideline-card {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+}
