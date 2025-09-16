@@ -38,13 +38,21 @@ const HeroSection = () => {
       </nav>
 
       <section className="hero-content">
-        <div className="relative z-10 p-10 rounded-xl text-white text-center max-w-3xl">
+        <div className="hero">
           <Countdown />
-          <h2 className="text-4xl font-bold mt-6 mb-4">Road to<br/>XTreme</h2>
-          <p className="text-lg">
-            IEEEXtreme is a global challenge in which teams of IEEE Student members – advised and proctored by an IEEE member, 
+          
+          <div class="hero-text">
+            <div>Road to</div>
+            <span class="highlight">X</span>
+            <p class="rest">treme</p>
+          </div>
+
+          <p className="hero-description">
+            IEEEXtreme is a global challenge in which teams of IEEE Student members – advised and proctored by an
+            IEEE member,
             and often supported by an IEEE Student Branch – compete in a 24-hour time span against each other to solve a set of programming problems.
           </p>
+
         </div>
       </section>
 

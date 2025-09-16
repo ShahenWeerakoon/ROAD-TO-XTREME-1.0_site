@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +38,7 @@
   z-index: 50;
   background: transparent;
   padding: 1rem 2rem;
+  margin-left: 5rem;
 }
 
 .navbar-container {
@@ -61,7 +64,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  margin-left: -30rem;
+  margin-left: -25rem;
 }
 
 .navbar-link {
@@ -93,6 +96,7 @@
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-right: 5rem;
 }
 
 .register-btn:hover {
@@ -119,9 +123,242 @@
   position: relative;
   z-index: 2;
   padding: 0 1rem;
+  margin-top: 5rem;
+  
+  margin-left: 5rem;
+}
+.hero-content .hero-text {
+  margin-top: 3rem;
 }
 
-.hero-content h2{
-   font-family: 'Orbitron', sans-serif;
+.hero-content .hero-text div,
+.hero-content .hero-text p,
+.hero-content .hero-text span{
+  font-family: 'Orbitron', sans-serif !important;
+}
+
+.hero-content .hero-text div{
+  font-size: 5rem;
+  font-weight: 400;
+  margin-left: 3.6rem;
+  color: #59E7BD;
+  padding: 0;             
+  line-height: .5;        
   
 }
+
+.hero-content .hero-text .highlight{
+  font-weight: 700;
+  font-size: 8rem;
+  margin-left: 2rem;
+  color: #4fc3f7;
+  padding: 0;            
+  line-height: 1;         
+}
+
+.hero-content .hero-text .rest{
+  font-weight: 500;
+  font-size: 4rem;
+  margin-left: 2rem;
+  padding: 0;
+  margin: 0;
+  display: inline; 
+}
+
+.hero-content .hero-description{
+  padding: 3rem 2rem 0 2rem;
+  margin-right: 27rem;
+  font-size: 1rem;
+}
+
+
+
+.about-section{
+  min-height: 100vh;
+  padding: 40px 20px;
+  scroll-margin-top: 80px;
+  background: black;
+  color: white;
+  padding-left: 5rem;
+}
+
+.about-section .overview{
+  text-align: left;
+  font-size: 1rem;
+}
+
+.about-details{
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.about-content{
+  display: flex;        
+  align-items: center;  
+  gap: 18rem;
+  margin-bottom: 2rem;
+}
+
+.about-content .about-heading span{
+  background: linear-gradient(135deg, 
+      #91E8CE 0%, 
+      #C8D3D5 61%, 
+      #6FAEEC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-points {
+  display: flex;
+  flex-direction: column; 
+  gap: 5rem;            
+}
+
+.point {
+  display: flex;          
+  gap: 2rem;              
+  flex-wrap: wrap;    
+}
+
+.point p {
+  margin: 0;             
+  flex: 1;            
+}
+
+.point.first-row {
+  display: flex;    
+  gap: 5rem;   
+}
+
+.point .second-row {
+  display: flex;     
+  gap: 7rem;          
+  
+}
+
+
+
+
+
+
+
+.timeline{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  scroll-margin-top: 80px;
+  background: #0E0E0E;
+}
+
+.timeline-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #498FD5, #21B88B, #E2ECED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #4fc3f7;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.timeline-card {
+  width: 45%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.timeline-card.left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.timeline-card.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-card .main {
+  color: #4fc3f7;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card .date {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card .desc {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-card,
+  .timeline-card.left,
+  .timeline-card.right {
+    width: 90%;
+    margin: 1rem auto 3rem auto;
+  }
+
+  .timeline-dot {
+    left: 50%;
+  }
+}
+
+
