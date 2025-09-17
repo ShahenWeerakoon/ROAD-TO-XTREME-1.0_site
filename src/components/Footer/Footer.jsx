@@ -4,7 +4,6 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
-  // Smooth scroll function (controlled speed)
   const scrollToSection = (e, id) => {
     e.preventDefault();
 
@@ -14,7 +13,7 @@ const Footer = () => {
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
-    const duration = 800; // Duration in ms (adjust for speed)
+    const duration = 800;
     let startTime = null;
 
     const animation = (currentTime) => {
@@ -27,7 +26,6 @@ const Footer = () => {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     };
 
-    // Ease function for smooth animation
     const ease = (t, b, c, d) => {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
@@ -56,17 +54,17 @@ const Footer = () => {
           </li>
           <li>
             <a href="#event" onClick={(e) => scrollToSection(e, "event")}>
-              Events Guide
+              Events
+            </a>
+          </li>
+          <li>
+            <a href="#guide" onClick={(e) => scrollToSection(e, "guide")}>
+              Guide
             </a>
           </li>
           <li>
             <a href="#guide" onClick={(e) => scrollToSection(e, "guide")}>
               Rules
-            </a>
-          </li>
-          <li>
-            <a href="#footer" onClick={(e) => scrollToSection(e, "footer")}>
-              Contact
             </a>
           </li>
         </ul>
