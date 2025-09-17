@@ -16,7 +16,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   width: 42rem;
-
 }
 
 .countdown-label {
@@ -24,7 +23,6 @@
   margin-right: 4px;
   color: #fff;
 }
-
 
 @media (max-width: 768px) {
   .countdown {

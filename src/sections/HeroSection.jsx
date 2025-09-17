@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Countdown from '../components/Countdown';
 import logo from '../assets/logo.png';
 import heroImage from '../assets/hero.png';
@@ -5,6 +6,49 @@ import "../../src/sections/Sections.css";
 import "../../src/index.css";
 
 const HeroSection = () => {
+  useEffect(() => {
+    const links = document.querySelectorAll(".navbar-link");
+
+    const scrollTo = (target, duration = 1000) => {
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      const easeInOutCubic = (t) => {
+        return t < 0.5
+          ? 4 * t * t * t
+          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
+
+      const animation = (currentTime) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const run = startPosition + distance * easeInOutCubic(progress);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      requestAnimationFrame(animation);
+    };
+
+    links.forEach(link => {
+      const handleClick = (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          scrollTo(targetElement, 1000);
+        }
+      };
+
+      link.addEventListener("click", handleClick);
+      return () => link.removeEventListener("click", handleClick);
+    });
+  }, []);
+
   return (
     <section
       id="home"
@@ -16,6 +60,7 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo">
@@ -25,10 +70,10 @@ const HeroSection = () => {
           <ul className="navbar-menu">
             <li><a href="#home" className="navbar-link">Home</a></li>
             <li><a href="#about" className="navbar-link">About</a></li>
-            <li><a href="#events" className="navbar-link">Events</a></li>
-            <li><a href="#rules" className="navbar-link">Rules</a></li>
-            <li><a href="#resources" className="navbar-link">Resources</a></li>
-            <li><a href="#contact" className="navbar-link">Contact</a></li>
+            <li><a href="#event" className="navbar-link">Events</a></li>
+            <li><a href="#guide" className="navbar-link">Guide</a></li>
+            <li><a href="#guide" className="navbar-link">Rules</a></li>
+            <li><a href="#footer" className="navbar-link">Contact</a></li>
           </ul>
 
           <div className="navbar-auth">
@@ -37,6 +82,7 @@ const HeroSection = () => {
         </div>
       </nav>
 
+      {/* Hero Content */}
       <section className="hero-content">
         <div className="hero-content-container">
           <Countdown />
