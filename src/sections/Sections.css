@@ -225,7 +225,7 @@
 }
 
 .about-highlight {
-  background: linear-gradient(135deg, #4ade80, #06b6d4);
+  background: linear-gradient(135deg, #4ade80,#e2eced, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
