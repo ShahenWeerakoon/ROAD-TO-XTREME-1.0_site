@@ -126,14 +126,26 @@
 
 .hero-title {
   display: flex;
+  flex-direction: column; /* Stack vertically instead of horizontally */
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  gap: 0; /* Remove any gap between lines */
+}
+.hero-title-top {
+  display: block;
+  line-height: 0.9; /* Tighten line spacing */
 }
 
+.hero-title-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.9; /* Tighten line spacing */
+  margin-top: -10px; /* Pull the second line closer to the first */
+}
 .hero-title .road-to {
   font-family: 'Orbitron', sans-serif;
   font-weight: 200;
@@ -142,13 +154,7 @@
   line-height: 100%;
   letter-spacing: 3%;
   display: inline-block;
-
-  color: transparent;
-  -webkit-text-stroke: 2px transparent;
   color: #ffffff;
-  -webkit-background-clip: text;
-  background-clip: text;
-
   -webkit-text-stroke: 2px #59E7BD;
 }
 
@@ -174,7 +180,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 20px; /* Add some space between X and treme */
 }
 
 .hero-text {
