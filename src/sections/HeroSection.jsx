@@ -9,24 +9,29 @@ const HeroSection = () => {
   useEffect(() => {
     const links = document.querySelectorAll(".navbar-link");
 
-    const scrollTo = (target, duration = 1000) => {
-      const navbarHeight = document.querySelector(".navbar").offsetHeight;
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-      const startPosition = window.scrollY;
+    // Smooth scroll function (same as footer)
+    const scrollToSection = (e, id) => {
+      e.preventDefault();
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
+      const duration = 800; // Adjust speed here
       let startTime = null;
 
-      const easeInOutCubic = (t) => {
-        return t < 0.5
-          ? 4 * t * t * t
-          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      const ease = (t, b, c, d) => {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
       };
 
       const animation = (currentTime) => {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const run = startPosition + distance * easeInOutCubic(progress);
+        const run = ease(timeElapsed, startPosition, distance, duration);
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
       };
@@ -36,14 +41,9 @@ const HeroSection = () => {
 
     links.forEach(link => {
       const handleClick = (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          scrollTo(targetElement, 1000);
-        }
+        scrollToSection(e, targetId);
       };
-
       link.addEventListener("click", handleClick);
       return () => link.removeEventListener("click", handleClick);
     });
