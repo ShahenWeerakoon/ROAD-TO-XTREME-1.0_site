@@ -3,7 +3,7 @@ import "./Guidelinesc.css";
 
 function Guidelines() {
   return (
-    <section className="guidelines">
+    <section id = "guide" className="guidelines">
       <h2 className="guidelines-title">Road to Xtreme Guidelines</h2>
       <div className="guidelines-grid">
         <div className="guideline-card">
