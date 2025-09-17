@@ -8,7 +8,7 @@
 .guidelines-title {
   font-size: 30px;
   margin-bottom: 30px;
-  background: linear-gradient(90deg, #64f4ac, #3da2ff);
+  background: linear-gradient(90deg,#4ade80 30%,#e2eced 50%, #06b6d4 60%);
   background-clip: text;          
   -webkit-background-clip: text;   
   -webkit-text-fill-color: transparent;
