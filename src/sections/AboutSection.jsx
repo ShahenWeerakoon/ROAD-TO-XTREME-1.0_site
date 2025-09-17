@@ -18,7 +18,7 @@ const aboutItems = [
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="about-container">
         {/* Header Section */}
         <div className="about-header">
