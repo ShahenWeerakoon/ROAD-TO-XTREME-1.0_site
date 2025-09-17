@@ -19,19 +19,11 @@
 
 /* Title */
 .event-title {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 47px;
-  line-height: 60px;
+  font-size: 40px;
+  margin-bottom: 30px;
   text-align: center;
-  background: linear-gradient(
-    90deg,
-    #21b88b 0%,
-    #e2eced 43%,
-    #c1d9ed 62%,
-    #498fd5 100%
-  );
-  -webkit-background-clip: text;
+  background: linear-gradient(90deg, #64f4ac, #3da2ff);
+  -webkit-background-clip: text;   
   -webkit-text-fill-color: transparent;
   margin: 0 auto 1rem auto;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footerc.css";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
@@ -78,16 +79,11 @@ const Footer = () => {
         </p>
 
         <div className="social-icons">
-          <a href="#">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin"></i>
-          </a>
+          <a href="https://www.facebook.com/share/17GotuLJqa/"><FaFacebook /></a>
+          <a href="https://www.instagram.com/cinecieee?igsh=MXNrMWdrYmgzbXp1dg=="><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/ieee-cinec-student-branch/"><FaLinkedin /></a>
         </div>
+
       </div>
 
       <div className="footer-copy">
