@@ -1,5 +1,5 @@
-// Timeline.jsx
-import React from "react";
+import "../../src/sections/Sections.css";
+import "../../src/index.css";
 
 const timelineEvents = [
   {
@@ -39,30 +39,34 @@ const timelineEvents = [
 
 const Timeline = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8 text-center">
-        Road to Xtreme – Event Timeline
-      </h1>
-      <div className="relative border-l-4 border-blue-500 ml-4">
-        {timelineEvents.map((event, index) => (
-          <div key={index} className="mb-10 ml-6">
-            <span className="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white font-bold">
-              {index + 1}
-            </span>
-            <h2 className="text-xl font-semibold">{event.title}</h2>
-            <p className="text-gray-600">
-              <span className="font-medium">Mode:</span> {event.mode}
-            </p>
-            <p className="text-gray-600">
-              <span className="font-medium">Date:</span> {event.date}
-            </p>
-            {event.details && (
-              <p className="text-gray-500 mt-1">{event.details}</p>
-            )}
-          </div>
-        ))}
+    <section id="events" className="timeline-section">
+      <div className="timeline-container">
+        <h2 className="timeline-title">Road to Xtreme – Event Timeline</h2>
+
+        <div className="timeline-line">
+          {timelineEvents.map((event, index) => (
+            <div key={index} className="timeline-item">
+              {/* Number bubble */}
+              <span className="timeline-circle">{index + 1}</span>
+
+              {/* Event card */}
+              <div className="timeline-card">
+                <h3 className="timeline-card-title">{event.title}</h3>
+                <p className="timeline-card-info">
+                  <span>Mode:</span> {event.mode}
+                </p>
+                <p className="timeline-card-info">
+                  <span>Date:</span> {event.date}
+                </p>
+                {event.details && (
+                  <p className="timeline-card-details">{event.details}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
