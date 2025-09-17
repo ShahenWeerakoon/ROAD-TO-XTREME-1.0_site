@@ -1,4 +1,3 @@
-import "./App.css";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import EventsSection from "./sections/EventsSection";

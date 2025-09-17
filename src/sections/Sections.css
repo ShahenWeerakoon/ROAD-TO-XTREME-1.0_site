@@ -114,16 +114,14 @@
   }
 }
 
-
 .hero-content {
   position: relative;
   z-index: 2;
   padding: 0 1rem;
 }
 
-.hero-content h2{
-   font-family: 'Orbitron', sans-serif;
-  
+.hero-content h2 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .hero-title {
@@ -136,7 +134,24 @@
   margin-bottom: 1rem;
 }
 
-.hero-title .road-to,
+.hero-title .road-to {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 103px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  display: inline-block;
+
+  color: transparent;
+  -webkit-text-stroke: 2px transparent;
+  color: #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-stroke: 2px #59E7BD;
+}
+
 .hero-title .treme {
   font-family: 'Orbitron', sans-serif;
   font-weight: 400;
@@ -184,7 +199,7 @@
 
 /* About Section */
 .about-section {
-  background: #1a1a1a; /* Dark background matching your image */
+  background: #1a1a1a;
   color: #ffffff;
   padding: 4rem 2rem;
   min-height: 100vh;

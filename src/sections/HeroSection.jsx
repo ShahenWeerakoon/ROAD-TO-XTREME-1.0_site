@@ -9,7 +9,6 @@ const HeroSection = () => {
   useEffect(() => {
     const links = document.querySelectorAll(".navbar-link");
 
-    // Smooth scroll function (same as footer)
     const scrollToSection = (e, id) => {
       e.preventDefault();
       const target = document.getElementById(id);
@@ -18,7 +17,7 @@ const HeroSection = () => {
       const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 800; // Adjust speed here
+      const duration = 800;
       let startTime = null;
 
       const ease = (t, b, c, d) => {
@@ -87,10 +86,15 @@ const HeroSection = () => {
         <div className="hero-content-container">
           <Countdown />
 
+          
           <h2 className="hero-title">
-            <span className="road-to">Road to</span>
-            <span className="x-text">X</span>
-            <span className="treme">treme</span>
+            <div className="hero-title-top">
+              <span className="road-to">Road to</span>
+            </div>
+            <div className="hero-title-bottom">
+              <span className="x-text">X</span>
+              <span className="treme">treme</span>
+            </div>
           </h2>
 
           <p className="hero-text">
