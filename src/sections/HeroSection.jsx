@@ -84,7 +84,7 @@ const HeroSection = () => {
             </li>
             <li>
               <a href="#event" className="navbar-link">
-                Events
+                Timeline
               </a>
             </li>
             <li>
@@ -92,16 +92,16 @@ const HeroSection = () => {
                 Guide
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#guide" className="navbar-link">
                 Rules
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#footer" className="navbar-link">
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <div className="navbar-auth">
