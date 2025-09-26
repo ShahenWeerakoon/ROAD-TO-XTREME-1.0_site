@@ -10,7 +10,8 @@ const Footer = () => {
     const target = document.getElementById(id);
     if (!target) return;
 
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     const duration = 800;
@@ -54,7 +55,7 @@ const Footer = () => {
           </li>
           <li>
             <a href="#event" onClick={(e) => scrollToSection(e, "event")}>
-              Events
+              Timeline
             </a>
           </li>
           <li>
@@ -62,26 +63,32 @@ const Footer = () => {
               Guide
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#guide" onClick={(e) => scrollToSection(e, "guide")}>
               Rules
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
 
       <div className="footer-bottom">
         <p>
-          September 2025 <br />
-          IEEE Student Branch · CINEC Campus
+          <b>© Road To Xtreme 1.0 </b>
+          <br />
+          IEEE Student Branch of CINEC Campus
         </p>
 
         <div className="social-icons">
-          <a href="https://www.facebook.com/share/17GotuLJqa/"><FaFacebook /></a>
-          <a href="https://www.instagram.com/cinecieee?igsh=MXNrMWdrYmgzbXp1dg=="><FaInstagram /></a>
-          <a href="https://www.linkedin.com/company/ieee-cinec-student-branch/"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/share/17GotuLJqa/">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/cinecieee?igsh=MXNrMWdrYmgzbXp1dg==">
+            <FaInstagram />
+          </a>
+          <a href="https://www.linkedin.com/company/ieee-cinec-student-branch/">
+            <FaLinkedin />
+          </a>
         </div>
-
       </div>
 
       <div className="footer-copy">
