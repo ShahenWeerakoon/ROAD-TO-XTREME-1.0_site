@@ -4,33 +4,41 @@ import "./EventSection.css";
 const timelineEvents = [
   {
     main: "Registration Opening",
-    date: "September 03 - 6.00 PM",
+    date: "September 30",
     description:
       "Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey.",
   },
   {
-    main: "Awareness Session",
-    date: "September 03 - 6.00 PM",
+    main: "Competitive Programming & Importance of DSA",
+    date: "September 04 - 7:00 PM",
     description:
-      "A dedicated session to guide participants through the hackathon process, rules, and expectations—ensuring everyone is prepared and inspired.",
+      "Explore the world of competitive programming, understand the importance of DSA, and see how algorithmic problem-solving impacts the real world.",
   },
   {
-    main: "Workshop 1",
-    date: "September 03 - 6.00 PM",
+    main: "Preparation Session - 02: AI Task Submission",
+    date: "October 06, 2025",
     description:
-      "Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey.",
+      "Submit your AI task with a well-prepared prompt and learn best practices for crafting effective AI solutions.",
   },
   {
-    main: "Awareness Session",
-    date: "September 03 - 6.00 PM",
+    main: "Training Weeks: Trial Coding Sessions",
+    date: "October 13 – 19, 2025",
     description:
-      "A dedicated session to guide participants through the hackathon process, rules, and expectations—ensuring everyone is prepared and inspired.",
+      "Hands-on coding sessions simulating competition conditions to help participants experience the contest environment, tackle different problem levels, and assess readiness for the actual IEEEXtreme challenge.",
   },
   {
-    main: "Workshop 1",
-    date: "September 3 - 6.00 AM",
+    main: "IEEEXtreme Awareness Session",
+    date: "October 18, 2025",
     description:
-      "Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey",
+      "An engaging session to raise awareness about key concepts, tools, and techniques to prepare participants for upcoming challenges.",
+  },
+  {
+    main: "IEEE Xtreme Global Hackathon – Campus Hosting",
+    date: "October 25 2025",
+
+    venue: "CINEC Campus – Zenith Lecture Hall",
+    description:
+      "Hosting the IEEE Xtreme Global Hackathon on campus. Participants will compete in this 24-hour global coding challenge, experiencing real contest conditions and showcasing their problem-solving skills.",
   },
 ];
 
