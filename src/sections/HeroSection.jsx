@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Countdown from '../components/Countdown';
-import logo from '../assets/logo.png';
-import heroImage from '../assets/hero.png';
+import Countdown from "../components/Countdown";
+import logo from "../assets/logo.png";
+import heroImage from "../assets/hero.png";
 import "../../src/sections/Sections.css";
 import "../../src/index.css";
 
@@ -14,7 +14,8 @@ const HeroSection = () => {
       const target = document.getElementById(id);
       if (!target) return;
 
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
       const duration = 800;
@@ -38,7 +39,7 @@ const HeroSection = () => {
       requestAnimationFrame(animation);
     };
 
-    links.forEach(link => {
+    links.forEach((link) => {
       const handleClick = (e) => {
         const targetId = link.getAttribute("href").substring(1);
         scrollToSection(e, targetId);
@@ -54,29 +55,65 @@ const HeroSection = () => {
       className="hero-section"
       style={{
         backgroundImage: `url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo">
-            <img src={logo} alt="IEEE Xtreme Logo" className="navbar-logo-img" />
+            <img
+              src={logo}
+              alt="IEEE Xtreme Logo"
+              className="navbar-logo-img"
+            />
           </div>
 
           <ul className="navbar-menu">
-            <li><a href="#home" className="navbar-link">Home</a></li>
-            <li><a href="#about" className="navbar-link">About</a></li>
-            <li><a href="#event" className="navbar-link">Events</a></li>
-            <li><a href="#guide" className="navbar-link">Guide</a></li>
-            <li><a href="#guide" className="navbar-link">Rules</a></li>
-            <li><a href="#footer" className="navbar-link">Contact</a></li>
+            <li>
+              <a href="#home" className="navbar-link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="navbar-link">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#event" className="navbar-link">
+                Timeline
+              </a>
+            </li>
+            <li>
+              <a href="#guide" className="navbar-link">
+                Guide
+              </a>
+            </li>
+            {/* <li>
+              <a href="#guide" className="navbar-link">
+                Rules
+              </a>
+            </li> */}
+            {/* <li>
+              <a href="#footer" className="navbar-link">
+                Contact
+              </a>
+            </li> */}
           </ul>
 
           <div className="navbar-auth">
-            <button className="register-btn">Register Now</button>
+            <button
+              className="register-btn"
+              onClick={() =>
+                (window.location.href =
+                  "https://docs.google.com/forms/d/e/1FAIpQLSeCFfoDGdnkWfBv9EmgHAss0jhsgbeiw3eK5T9qK9FSd89Sfg/viewform?usp=dialog")
+              }
+            >
+              Register Now
+            </button>
           </div>
         </div>
       </nav>
@@ -86,7 +123,6 @@ const HeroSection = () => {
         <div className="hero-content-container">
           <Countdown />
 
-          
           <h2 className="hero-title">
             <div className="hero-title-top">
               <span className="road-to">Road to</span>
@@ -98,8 +134,10 @@ const HeroSection = () => {
           </h2>
 
           <p className="hero-text">
-            IEEEXtreme is a global challenge in which teams of IEEE Student members – advised and proctored by an IEEE member, 
-            and often supported by an IEEE Student Branch – compete in a 24-hour time span against each other to solve a set of programming problems.
+            IEEEXtreme is a global challenge in which teams of IEEE Student
+            members – advised and proctored by an IEEE member, and often
+            supported by an IEEE Student Branch – compete in a 24-hour time span
+            against each other to solve a set of programming problems.
           </p>
         </div>
       </section>
