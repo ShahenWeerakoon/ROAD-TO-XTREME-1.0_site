@@ -134,10 +134,11 @@ const HeroSection = () => {
           </h2>
 
           <p className="hero-text">
-            IEEEXtreme is a global challenge in which teams of IEEE Student
-            members – advised and proctored by an IEEE member, and often
-            supported by an IEEE Student Branch – compete in a 24-hour time span
-            against each other to solve a set of programming problems.
+            Road to Xtreme is a series of preparation sessions and training
+            programs leading up to IEEEXtreme 19.0, the global 24-hour coding
+            hackathon. It helps students sharpen their coding skills, gain
+            real-world problem-solving experience, and get ready to compete on
+            an international stage.
           </p>
         </div>
       </section>

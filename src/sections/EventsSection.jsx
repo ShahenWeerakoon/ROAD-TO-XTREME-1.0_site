@@ -15,7 +15,7 @@ const timelineEvents = [
       "Explore the world of competitive programming, understand the importance of DSA, and see how algorithmic problem-solving impacts the real world.",
   },
   {
-    main: "Preparation Session - 02: AI Task Submission",
+    main: "AI Task Submission",
     date: "October 06, 2025",
     description:
       "Submit your AI task with a well-prepared prompt and learn best practices for crafting effective AI solutions.",
