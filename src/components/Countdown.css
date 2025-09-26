@@ -12,21 +12,31 @@
   align-items: center;
   justify-content: flex-start; /* Add this for consistent left alignment */
   gap: 6px;
-  background: rgba(84, 115, 106, 0.2);
+  background: rgba(96, 150, 135, 0.2);
   border-radius: 12px;
   padding: 12px 15px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #59e7e5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   width: fit-content; /* Changed from fixed 42rem to fit-content for better responsiveness */
   max-width: 42rem; /* Add max-width to prevent it from getting too wide */
+  animation: colorPulse 2s ease-in-out infinite;
 }
-
+@keyframes colorPulse {
+  0%,
+  100% {
+    color: #59e7bd; /* soft green */
+  }
+  50% {
+    color: #89b0d8; /* light blue at peak */
+  }
+}
 .countdown-label {
   font-weight: 500;
   margin-right: 4px;
-  color: #fff;
+  color: #59e7e5;
+  animation: colorPulse 2s ease-in-out infinite;
 }
 
 .countdown-value {
