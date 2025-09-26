@@ -108,8 +108,7 @@ const HeroSection = () => {
             <button
               className="register-btn"
               onClick={() =>
-                (window.location.href =
-                  "https://docs.google.com/forms/d/e/1FAIpQLSeCFfoDGdnkWfBv9EmgHAss0jhsgbeiw3eK5T9qK9FSd89Sfg/viewform?usp=dialog")
+                (window.location.href = "https://forms.gle/xePL4VVHoFAdALtt7")
               }
             >
               Register Now
